@@ -6,6 +6,8 @@
 
 using namespace std;
 
+const double PI = atan(1)*4;
+
 double conv(string & s){
   for(int i=0;i<int(s.size());++i)
     if(s[i]==',')
@@ -16,6 +18,8 @@ double conv(string & s){
 }
 
 double dist(double lon1, double lat1, double lon2, double lat2){
+  lon1*=PI/180, lat1*=PI/180;
+  lon2*=PI/180, lat2*=PI/180;  
   double x=(lon2-lon1)*cos((lat1+lat2)/2);
   double y=lat2-lat1;
   return sqrt(x*x+y*y)*6371;
