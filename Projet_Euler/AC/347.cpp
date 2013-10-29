@@ -28,7 +28,8 @@ int main(){
   for(int i=2;i<=N;++i)
     if(int(t[i].size())==0)
       for(int j=i;j<=N;j+=i)
-	t[j].push_back(i);
+	if(int(t[j].size())<3)
+	  t[j].push_back(i);
 
   ll res=0;  
   for(int i=0;i<=N;++i)
