@@ -9,9 +9,9 @@ bool is2(ll a){
 }
 
 int main(){
-  double perfect=1;
+  ll perfect=1;
   ll p;
-  for(p=3;perfect/(p-1)>=1./12345.;++p){
+  for(p=3;perfect*12345>=p-1;++p){
     if(is2(p))
       ++perfect;
   }
