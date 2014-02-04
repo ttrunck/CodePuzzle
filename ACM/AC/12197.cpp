@@ -28,8 +28,11 @@ int main(){
   int n;
   while(cin >> n && n){
     vector<com> t(n);
-    for(int i=0;i<n;++i)
-      cin >> t[i].real() >> t[i].imag();
+    for(int i=0;i<n;++i){
+      double r,im;
+      cin >> r >> im;
+      t[i]=complex<double>{r,im};
+    }
     double lo=-200000, hi=200000;
     while(hi-lo>epsi){
       double x=(hi+lo)/2;
