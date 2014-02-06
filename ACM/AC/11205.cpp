@@ -9,8 +9,8 @@ bool ok(int k, int p, const vector<int>& t){
   int bset = (1 << k) - 1;
   while (bset < (1<<p)) {
     set<int> s;
-    for(int x:t)
-      s.insert(x&bset);
+    for(int i=0;i<int(t.size());++i)
+      s.insert(t[i]&bset);
     if(s.size()==t.size())
       return true;
 
@@ -24,7 +24,6 @@ bool ok(int k, int p, const vector<int>& t){
 
 int main(){
   ios::sync_with_stdio(false);
-  cin.tie(nullptr);
   int T;
   cin >> T;
   while(T--){
