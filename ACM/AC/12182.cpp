@@ -26,6 +26,7 @@ int aux(int k, int from){
 }
 
 int main(){
+  ios::sync_with_stdio(false);
   cin >> e;
   while(e!=0){
     init();

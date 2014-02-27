@@ -3,7 +3,7 @@
 #include<string>
 
 using namespace std;
-/*
+
 int sum(int x, int y, const vector<int> & t){
   if(x==0){
     int res=0;
@@ -25,8 +25,8 @@ void mod(int y, int val, vector<int> &t, vector<int> & m) {
     y=y|(y+1);
   }
 }
-*/
 
+/*
 void mod(int x, int val, vector<int> & t, vector<int> & m){
   t[x]=val;
 }
@@ -37,7 +37,7 @@ int sum(int x, int y, const vector<int> & t){
     res+=t[i];
   return res;
 }
-
+*/
 int main(){
   int icase=1;
   bool first=true;
