@@ -7,13 +7,13 @@ void next(vector<int> & t){
   vector<int> tmp;
   int val=t[0];
   int nb=1;
-  for(int i:t-{
-    if(i==val)
+  for(int i = 1 ; i<t.size();++i){
+    if(t[i]==val)
       nb++;
     else{
       tmp.push_back(nb);
       tmp.push_back(val);
-      val=i;
+      val=t[i];
       nb=1;
     }
   }
@@ -29,6 +29,7 @@ int main(){
   for(int i=1;i<l;++i)
     next(t);
  
-  for(int i:t)
-    cout << i << ' ';
+  cout << t[0];
+  for(int i = 1;i<t.size();++i)
+    cout << ' ' << t[i];
 }
